@@ -1,0 +1,64 @@
+:root {
+  --bg-primary: #0a1128;
+  --bg-panel: rgba(16, 28, 64, 0.7);
+  --border-gold: linear-gradient(180deg, #ffd700, #b8860b);
+  --text-gold: #ffd700;
+  --text-light: #ffffff;
+  --text-blue: #4da6ff;
+  
+  --wheel-red: #ff3333;
+  --wheel-blue: #3388ff;
+  --wheel-yellow: #ffcc00;
+  --wheel-green: #33cc33;
+  --wheel-purple: #9933ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  /* A simple geometric pattern to mimic the screenshot */
+  background-image: 
+    linear-gradient(30deg, #13204a 12%, transparent 12.5%, transparent 87%, #13204a 87.5%, #13204a),
+    linear-gradient(150deg, #13204a 12%, transparent 12.5%, transparent 87%, #13204a 87.5%, #13204a),
+    linear-gradient(30deg, #13204a 12%, transparent 12.5%, transparent 87%, #13204a 87.5%, #13204a),
+    linear-gradient(150deg, #13204a 12%, transparent 12.5%, transparent 87%, #13204a 87.5%, #13204a),
+    linear-gradient(60deg, #1c2e66 25%, transparent 25.5%, transparent 75%, #1c2e66 75%, #1c2e66),
+    linear-gradient(60deg, #1c2e66 25%, transparent 25.5%, transparent 75%, #1c2e66 75%, #1c2e66);
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  color: var(--text-light);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  user-select: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glassmorphism Panel Utility */
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.gold-border {
+  border: 3px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: var(--border-gold);
+}
